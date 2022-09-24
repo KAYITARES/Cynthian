@@ -131,7 +131,6 @@ nav {
   border-radius: 8px;
   cursor: pointer;
   transition: all .5s;
-  background-size: 300% 100%;
   moz-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
@@ -141,11 +140,6 @@ nav {
 .btn:hover, .btn:active {
   background-image: linear-gradient(to left bottom, #f1662c, #54b3d6);
   color: #ddd;
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
   box-shadow: inset(2px 4px 5px rgba(128, 128, 128, 0.895)); }
 
 .btn:focus {
