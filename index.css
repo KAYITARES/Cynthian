@@ -44,13 +44,15 @@ nav {
   left: 0%;
   height: 100%;
   width: 3px;
-  background-color: #7b7373; }
+  background-image: linear-gradient(to bottom, #54b3d6, #fff, #f1662c); }
 
 .sub-logo {
   display: block;
   font-size: 1.5rem;
   text-align: center;
-  color: #a19b9b; }
+  background-image: linear-gradient(to right, #54b3d6, #f1662c);
+  color: transparent;
+  -webkit-background-clip: text; }
 
 .menu-icon-box {
   display: none;
@@ -73,7 +75,7 @@ nav {
   align-items: center; }
 
 .nav-link:link, .nav-link:visited {
-  background-image: linear-gradient(to right, #f1662c, #f1662c 50%, #fff 50%);
+  background-image: linear-gradient(to right, #f1662c, #54b3d6 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: -100%;
   -webkit-background-clip: text;
@@ -108,9 +110,51 @@ nav {
 .header {
   display: flex;
   flex-direction: row-reverse;
+  padding: 0 6rem;
   width: 100%;
   height: 90%;
   background-color: #000; }
+
+.btn-div {
+  text-align: center;
+  z-index: 10;
+  padding-top: 4rem; }
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  display: inline-flex;
+  padding: 1.8rem 3.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .5s;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow: inset(2px 1px 5px rgba(128, 128, 128, 0.678)); }
+
+.btn:hover, .btn:active {
+  background-image: linear-gradient(to left bottom, #f1662c, #54b3d6);
+  color: #ddd;
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow: inset(2px 4px 5px rgba(128, 128, 128, 0.895)); }
+
+.btn:focus {
+  outline: none; }
+
+.hire {
+  border: 1px solid #f1662c;
+  background: #2928285b;
+  color: #f1662c; }
 
 .header-paragraph {
   position: relative;
@@ -120,7 +164,7 @@ nav {
 .header-paragraph-box {
   position: absolute;
   top: 50%;
-  left: 60%;
+  left: 50%;
   width: 80%;
   transform: translate(-50%, -50%); }
 
@@ -135,13 +179,14 @@ h3 .names {
   color: #f1662c; }
 
 h3.professional {
-  font-size: 3rem; }
+  font-size: 3rem;
+  padding: 1.5rem 0; }
 
 .typing {
-  color: transparent;
   letter-spacing: 1.5px;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom right, #f1662c, #938d8d); }
+  background-image: linear-gradient(to right, #54b3d6, #f1662c);
+  color: transparent;
+  -webkit-background-clip: text; }
 
 .header-paragraph-box p {
   font-size: 2rem; }
@@ -157,6 +202,14 @@ h3.professional {
 .header-paragraph {
   width: 100%; }
 
+@media (max-width: 1100px) {
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 3rem; }
+
+  .img-box {
+    display: none; } }
 @media (max-width: 914px) {
   .nav-links {
     display: flex;
