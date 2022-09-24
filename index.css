@@ -65,7 +65,7 @@ nav {
   border-radius: 8px;
   z-index: 2;
   width: 3.8rem;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   color: #f1662c; }
 
 .nav-links {
@@ -74,7 +74,8 @@ nav {
   gap: 3rem;
   align-items: center; }
 
-.nav-link:link, .nav-link:visited {
+.nav-link:link,
+.nav-link:visited {
   background-image: linear-gradient(to right, #f1662c, #54b3d6 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: -100%;
@@ -97,10 +98,11 @@ nav {
   left: 0;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   background: #f1662c; }
 
-.nav-link:hover, .nav-link:active {
+.nav-link:hover,
+.nav-link:active {
   background-position: 0; }
 
 .nav-link:hover::before {
@@ -120,7 +122,8 @@ nav {
   z-index: 10;
   padding-top: 4rem; }
 
-.btn:link, .btn:visited {
+.btn:link,
+.btn:visited {
   text-decoration: none;
   font-size: 2rem;
   display: inline-flex;
@@ -130,15 +133,16 @@ nav {
   z-index: 1;
   border-radius: 8px;
   cursor: pointer;
-  transition: all .5s;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  transition: all 0.5s;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   box-shadow: inset(2px 1px 5px rgba(128, 128, 128, 0.678)); }
 
-.btn:hover, .btn:active {
-  background-image: linear-gradient(to left bottom, #f1662c, #54b3d6);
+.btn:hover,
+.btn:active {
+  background: #f1662c;
   color: #ddd;
   box-shadow: inset(2px 4px 5px rgba(128, 128, 128, 0.895)); }
 
@@ -169,7 +173,7 @@ h3.hi {
 h3 .names {
   font-size: 3.2rem;
   font-weight: 700;
-  font-family: 'Clicker Script', cursive;
+  font-family: "Clicker Script", cursive;
   color: #f1662c; }
 
 h3.professional {
@@ -209,7 +213,8 @@ h3.professional {
     display: flex;
     gap: 1.5rem; }
 
-  .nav-link:link, .nav-link:visited {
+  .nav-link:link,
+  .nav-link:visited {
     font-size: 1.6rem; } }
 @media (max-width: 750px) {
   .nav-links {
