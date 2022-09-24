@@ -15,7 +15,8 @@ nav {
   padding: 2.5rem 5rem;
   height: 10%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 999; }
 
 .logo-box {
   width: 50%; }
