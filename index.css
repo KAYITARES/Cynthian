@@ -1,3 +1,33 @@
+.logo-name::after {
+  background-image: linear-gradient(to bottom, #54b3d6, #fff, #f1662c); }
+
+.nav-link:link, .nav-link:visited {
+  background-image: linear-gradient(to right, #f1662c, #54b3d6 50%, #fff 50%); }
+
+.logo-name .sub-logo, .typing {
+  background-image: linear-gradient(to right, #54b3d6, #f1662c); }
+
+.logo-name .sub-logo, .nav-link:link, .nav-link:visited, .typing {
+  color: transparent;
+  -webkit-background-clip: text; }
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  font-size: 2rem;
+  display: inline-flex;
+  padding: 1.8rem 3.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: inset(2px 1px 5px #ddd); }
+
 * {
   margin: 0;
   padding: 0;
@@ -21,43 +51,29 @@ nav {
 
 .logo-box {
   width: 50%; }
-
 .logo-img {
   display: flex;
   gap: 1.5rem; }
-
-.icon-logo {
-  font-size: 4.5rem;
-  color: #f1662c; }
-
+  .logo-img .icon-logo {
+    font-size: 4.5rem;
+    color: #f1662c; }
 .logo-name {
-  color: aliceblue;
+  color: #ddd;
   font-size: 1.8rem;
   letter-spacing: 1.5px;
   padding: 0 0 0 1rem;
   position: relative; }
-
-.logo-name::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0%;
-  height: 100%;
-  width: 3px;
-  background-image: linear-gradient(to bottom, #54b3d6, #fff, #f1662c); }
-
-.sub-logo {
-  display: block;
-  font-size: 1.5rem;
-  text-align: center;
-  background-image: linear-gradient(to right, #54b3d6, #f1662c);
-  color: transparent;
-  -webkit-background-clip: text; }
-
-.menu-icon-box {
-  display: none;
-  background-color: rgba(5, 5, 5, 0.473);
-  z-index: 1; }
+  .logo-name::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 3px; }
+  .logo-name .sub-logo {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center; }
 
 .menu-icon {
   font-size: 1.8rem;
@@ -67,6 +83,10 @@ nav {
   width: 3.8rem;
   padding: 1rem 0.5rem;
   color: #f1662c; }
+  .menu-icon-box {
+    display: none;
+    background-color: rgba(5, 5, 5, 0.473);
+    z-index: 1; }
 
 .nav-links {
   list-style-type: none;
@@ -74,20 +94,15 @@ nav {
   gap: 3rem;
   align-items: center; }
 
-.nav-link:link,
-.nav-link:visited {
-  background-image: linear-gradient(to right, #f1662c, #54b3d6 50%, #fff 50%);
+.nav-link:link, .nav-link:visited {
   background-size: 200% 100%;
   background-position: -100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
   font-size: 1.8rem;
   padding-bottom: 2rem;
   text-transform: uppercase;
   position: relative;
   text-decoration: none; }
-
 .nav-link::before {
   content: "";
   width: 100%;
@@ -100,14 +115,13 @@ nav {
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
   background: #f1662c; }
-
-.nav-link:hover,
+.nav-link:hover {
+  background-position: 0; }
+  .nav-link:hover::before {
+    transform-origin: right;
+    transform: scaleX(1); }
 .nav-link:active {
   background-position: 0; }
-
-.nav-link:hover::before {
-  transform-origin: right;
-  transform: scaleX(1); }
 
 .header {
   display: flex;
@@ -116,36 +130,27 @@ nav {
   width: 100%;
   height: 90%;
   background-color: #000; }
+  .header-paragraph {
+    position: relative;
+    color: #ddd;
+    width: 100%; }
+    .header-paragraph-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%); }
+      .header-paragraph-box p {
+        font-size: 2rem; }
 
 .btn-div {
   text-align: center;
   z-index: 10;
   padding-top: 4rem; }
-
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  font-size: 2rem;
-  display: inline-flex;
-  padding: 1.8rem 3.4rem;
-  text-transform: uppercase;
-  text-align: center;
-  z-index: 1;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.5s;
-  moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  box-shadow: inset(2px 1px 5px rgba(128, 128, 128, 0.678)); }
-
-.btn:hover,
-.btn:active {
+.btn:hover, .btn:active {
   background: #f1662c;
   color: #ddd;
-  box-shadow: inset(2px 4px 5px rgba(128, 128, 128, 0.895)); }
-
+  box-shadow: inset(2px 4px 5px #ddd); }
 .btn:focus {
   outline: none; }
 
@@ -154,90 +159,26 @@ nav {
   background: #2928285b;
   color: #f1662c; }
 
-.header-paragraph {
-  position: relative;
-  color: #cecece;
-  width: 100%; }
-
-.header-paragraph-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80%;
-  transform: translate(-50%, -50%); }
-
 h3.hi {
   font-size: 2.8rem;
   font-weight: 400; }
-
 h3 .names {
   font-size: 3.2rem;
   font-weight: 700;
   font-family: "Clicker Script", cursive;
   color: #f1662c; }
-
 h3.professional {
   font-size: 3rem;
   padding: 1.5rem 0; }
 
 .typing {
-  letter-spacing: 1.5px;
-  background-image: linear-gradient(to right, #54b3d6, #f1662c);
-  color: transparent;
-  -webkit-background-clip: text; }
-
-.header-paragraph-box p {
-  font-size: 2rem; }
+  letter-spacing: 1.5px; }
 
 .img-box {
   width: 100%; }
-
-.image {
-  width: 100%;
-  display: flex;
-  height: 100%; }
-
-.header-paragraph {
-  width: 100%; }
-
-@media (max-width: 1100px) {
-  .header {
+  .img-box .image {
+    width: 100%;
     display: flex;
-    flex-direction: row-reverse;
-    padding: 0 3rem; }
-
-  .img-box {
-    display: none; } }
-@media (max-width: 914px) {
-  .nav-links {
-    display: flex;
-    gap: 1.5rem; }
-
-  .nav-link:link,
-  .nav-link:visited {
-    font-size: 1.6rem; } }
-@media (max-width: 750px) {
-  .nav-links {
-    display: none; }
-
-  .menu-icon-box {
-    display: flex;
-    align-items: center; } }
-@media (max-width: 680px) {
-  nav {
-    padding: 2rem;
-    height: 10%; }
-
-  .logo-box {
-    width: 80%; }
-
-  .icon-logo {
-    font-size: 3.5rem; }
-
-  .logo-name {
-    font-size: 1.5rem; }
-
-  .sub-logo {
-    font-size: 1.2rem; } }
+    height: 100%; }
 
 /*# sourceMappingURL=index.css.map */
