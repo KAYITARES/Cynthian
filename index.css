@@ -1,13 +1,13 @@
 .logo-name::after {
   background-image: linear-gradient(to bottom, #54b3d6, #fff, #f1662c); }
 
-.nav-link:link, .nav-link:visited {
+.nav-link:link, .nav-link:visited, .about-container .about-heading {
   background-image: linear-gradient(to right, #f1662c, #54b3d6 50%, #fff 50%); }
 
-.logo-name .sub-logo, .typing {
+.logo-name .sub-logo, .typing, .about-container .about-heading::before, .about-container .about-heading::after {
   background-image: linear-gradient(to right, #54b3d6, #f1662c); }
 
-.logo-name .sub-logo, .nav-link:link, .nav-link:visited, .typing {
+.logo-name .sub-logo, .nav-link:link, .nav-link:visited, .typing, .about-container .about-heading {
   color: transparent;
   -webkit-background-clip: text; }
 
@@ -194,16 +194,52 @@ h3.professional {
   align-items: center;
   justify-content: center; }
   .about-container .about-image-box {
-    background: green;
-    border: 1rem solid #f1662c;
     position: relative; }
-  .about-container .about-image {
-    background-color: black; }
-    .about-container .about-image::before {
-      content: '';
+    .about-container .about-image-box::after {
+      content: "";
       position: absolute;
-      top: 20px; }
+      height: 80px;
+      right: 1rem;
+      bottom: -4rem;
+      width: 8rem;
+      border-bottom: 1rem solid #f1662c;
+      border-right: 1rem solid #f1662c; }
+    .about-container .about-image-box::before {
+      content: "";
+      position: absolute;
+      height: 80px;
+      left: -1rem;
+      top: -4rem;
+      width: 8rem;
+      border-top: 1rem solid #f1662c;
+      border-left: 1rem solid #f1662c; }
+  .about-container .about-image {
+    transform: rotateY(220deg);
+    margin: auto;
+    border-radius: 5px;
+    background-color: black; }
   .about-container .about-paragraph-box {
-    background: yellow; }
+    color: #ddd;
+    font-size: 2.4rem; }
+  .about-container .about-heading {
+    font-size: 4.8rem;
+    letter-spacing: 1.5px;
+    position: relative; }
+    .about-container .about-heading::before {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 10%;
+      height: 3px; }
+    .about-container .about-heading::after {
+      content: " ";
+      position: absolute;
+      bottom: -1rem;
+      left: 0;
+      width: 7%;
+      height: 3px; }
+  .about-container .about-paragraph {
+    padding-top: 3rem; }
 
 /*# sourceMappingURL=index.css.map */
