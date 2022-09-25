@@ -53,8 +53,13 @@ html {
 }
 
 nav {
-  padding: 2.5rem 5rem;
-  height: 10%;
+  // padding: 2.5rem 5rem;
+  padding: 2.5rem 10rem;
+  // height: 10%;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
   display: flex;
   justify-content: space-between;
   z-index: 999;
@@ -107,10 +112,13 @@ nav {
   width: 3.8rem;
   padding: 1rem 0.5rem;
   color: $orange;
+  background-color: rgba(5, 5, 5, 0.473);
+
   &-box {
     display: none;
-    background-color: rgba(5, 5, 5, 0.473);
+    
     z-index: 1;
+   
   }
 }
 //navbar link style
@@ -163,10 +171,9 @@ nav {
 .header {
   display: flex;
   flex-direction: row-reverse;
-  padding: 0 6rem;
-
+  padding: 10rem 1rem 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   background-color: $black;
   &-paragraph {
     position: relative;
@@ -243,4 +250,58 @@ h3 {
     display: flex;
     height: 100%;
   }
+}
+//about section
+
+%padd-100{
+  padding:10rem;
+  background:$dark-gray;
+}
+$width-100:100%;
+.about-container{
+  @extend %padd-100;
+  .about{
+    display:flex;
+    width:$width-100;;
+    align-items: center;
+    justify-content:center;
+    &-image-box{
+     
+      // width:40%;
+      // padding:3rem;
+      background:green;
+      
+      border: 1rem solid $orange;
+      position: relative;
+         
+    }
+    
+    &-image{
+      // transform: rotateY(220deg);
+      background-color:black;
+      // display: block;
+     
+     
+     
+      &::before{
+       content: '';
+       position: absolute;
+       top:20px;
+      
+      }
+      
+     
+    
+     
+      
+    }
+  
+    &-paragraph-box{
+      background:yellow;
+      // width: $width-100;
+    }
+  }
+ 
+ 
+
 }
