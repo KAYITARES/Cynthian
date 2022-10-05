@@ -1,0 +1,14 @@
+@mixin backgroundColor($direction) {
+  background-image: linear-gradient(
+    to $direction,
+
+    $color-blue,
+    $color-dark-white,
+    $color-orange
+  );
+}
+@mixin text-background-color($direction) {
+  background-image: linear-gradient(to $direction, $color-blue, $color-orange);
+  color: transparent;
+  -webkit-background-clip: text;
+}

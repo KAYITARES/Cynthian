@@ -1,0 +1,22 @@
+{
+  "name": "cynthian",
+  "version": "1.0.0",
+  "description": "my portfolio web",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss index.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KAYITARES/Cynthian.git"
+  },
+  "author": "KAYITARE-C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KAYITARES/Cynthian/issues"
+  },
+  "homepage": "https://github.com/KAYITARES/Cynthian#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

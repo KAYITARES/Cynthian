@@ -1,0 +1,205 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+
+@import "layout/nav";
+@import "layout/header";
+@import "pages/home";
+
+%background-img-bottom {
+  background-image: linear-gradient(
+    to bottom,
+    $color-blue,
+    $color-white,
+    $color-orange
+  );
+}
+%background-img-unit {
+  background-image: linear-gradient(
+    to right,
+    $color-orange,
+    $color-blue 50%,
+    $color-white 50%
+  );
+}
+%background-img {
+  background-image: linear-gradient(to right, $color-blue, $color-orange);
+}
+
+%text-color-mixed {
+  color: transparent;
+  -webkit-background-clip: text;
+}
+%btn {
+  text-decoration: none;
+  font-size: 2rem;
+  display: inline-flex;
+  padding: 1.8rem 3.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s;
+  // align-items: center;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: inset(2px 1px 5px $color-dark-white);
+}
+
+.menu-icon {
+  font-size: 1.8rem;
+  border: 2px solid $color-orange;
+  border-radius: 8px;
+  z-index: 2;
+  width: 3.8rem;
+  padding: 1rem 0.5rem;
+  color: $color-orange;
+  background-color: rgba(5, 5, 5, 0.473);
+
+  &-box {
+    display: none;
+
+    z-index: 1;
+  }
+}
+//navbar link style
+
+.btn {
+  &-div {
+    text-align: center;
+    z-index: 10;
+    padding-top: 4rem;
+  }
+  &:link,
+  &:visited {
+    @extend %btn;
+    animation: moveInBottom 1s ease-out 0.3s backwards;
+  }
+  &:hover {
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.068);
+    transform: translateY(-3px);
+  }
+  &:active {
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.068);
+    transform: translateY(-1px);
+  }
+  &:hover,
+  &:active {
+    background: $color-orange;
+
+    color: $color-dark-white;
+    box-shadow: inset(2px 4px 5px $color-dark-white);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.hire {
+  border: 1px solid $color-orange;
+  background: $color-gray;
+  color: $color-orange;
+}
+
+//about section
+
+%padd-100 {
+  padding: 10rem;
+  background: $color-dark-gray;
+}
+$width-100: 100%;
+.about-container {
+  @extend %padd-100;
+  .about {
+    display: flex;
+    width: $width-100;
+    align-items: center;
+    justify-content: center;
+    &-image-box {
+      position: relative;
+      // z-index:1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 80px;
+        right: 1rem;
+        bottom: -4rem;
+        width: 8rem;
+        border-bottom: 1rem solid $color-orange;
+        border-right: 1rem solid $color-orange;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 80px;
+        left: -1rem;
+        top: -4rem;
+        width: 8rem;
+
+        border-top: 1rem solid $color-orange;
+        border-left: 1rem solid $color-orange;
+      }
+
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom:-2rem;
+      //   left:4rem;
+
+      //  padding:30rem 1rem;
+      //   width:70%;
+      //   border: 1rem solid $color-orange;
+
+      // }
+    }
+
+    &-image {
+      transform: rotateY(220deg);
+      margin: auto;
+      border-radius: 5px;
+      // height:40rem;
+      background-color: black;
+    }
+
+    &-paragraph-box {
+      color: $color-dark-white;
+      font-size: 2.4rem;
+      // width: $width-100;
+    }
+    &-heading {
+      font-size: 4.8rem;
+      @extend %text-color-mixed;
+      @extend %background-img-unit;
+      letter-spacing: 1.5px;
+      // padding-bottom: 3rem;
+      position: relative;
+      &::before {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10%;
+        height: 3px;
+        @extend %background-img;
+      }
+      &::after {
+        content: " ";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 7%;
+        height: 3px;
+        @extend %background-img;
+      }
+    }
+    &-paragraph {
+      padding-top: 3rem;
+    }
+  }
+}

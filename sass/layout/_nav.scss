@@ -1,0 +1,92 @@
+.nav {
+  // padding: 2.5rem 5rem;
+  padding: 2.5rem 10rem;
+  // height: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  background-color: $color-dark-gray;
+  &__logo-box {
+    width: 50%;
+  }
+  &__logo {
+    display: flex;
+    gap: 1.5rem;
+    .icon-logo {
+      font-size: 4.5rem;
+      color: $color-orange;
+    }
+    &--name {
+      color: $color-dark-white;
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+      padding: 0 0 0 1rem;
+      position: relative;
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0%;
+        height: 100%;
+        width: 2px;
+        @include backgroundColor(bottom); //   @extend %background-img-bottom;
+      }
+    }
+    &--subname {
+      display: block;
+      font-size: 1.5rem;
+      text-align: center;
+      @extend %text-color-mixed;
+      @extend %background-img;
+    }
+  }
+  &__nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  &__nav-link {
+    &:link,
+    &:visited {
+      @extend %background-img-unit;
+      background-size: 200% 100%;
+      background-position: -100%;
+      @include text-background-color(right);
+      transition: all 0.3s ease-in-out;
+      font-size: 1.8rem;
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+      position: relative;
+      text-decoration: none;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease-in-out;
+      background: $color-orange;
+    }
+    &:hover {
+      background-position: 0;
+      &::before {
+        transform-origin: right;
+        transform: scaleX(1);
+      }
+    }
+    &:active {
+      background-position: 0;
+    }
+  }
+}
