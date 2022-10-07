@@ -25,3 +25,52 @@ h3 {
   letter-spacing: 1.5px;
   @include text-background-color(right);
 }
+.menu-icon {
+  font-size: 1.8rem;
+  border: 2px solid $color-orange;
+  border-radius: 8px;
+  z-index: 2;
+  width: 3.8rem;
+  padding: 1rem 0.5rem;
+  color: $color-orange;
+  background-color: rgba(5, 5, 5, 0.473);
+
+  &-box {
+    display: none;
+
+    z-index: 1;
+  }
+}
+//about typography
+.paragraph {
+  color: $color-dark-white;
+  font-size: 2.4rem;
+  &__heading {
+    font-size: 4.8rem;
+    @extend %text-color-mixed;
+    @extend %background-img-unit;
+    letter-spacing: 1.5px;
+    // padding-bottom: 3rem;
+    position: relative;
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      height: 3px;
+      left: 0;
+      @include backgroundColor(right);
+    }
+    &::before {
+      bottom: 0;
+      width: 10%;
+    }
+    &::after {
+      bottom: -1rem;
+      width: 7%;
+    }
+  }
+  &__paragraph {
+    padding-top: 3rem;
+  }
+  // width: $width-100;
+}

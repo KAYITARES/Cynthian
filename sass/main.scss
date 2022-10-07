@@ -3,7 +3,11 @@
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
+@import "base/utilities.scss";
 
+@import "components/button";
+
+@import "layout/grid";
 @import "layout/nav";
 @import "layout/header";
 @import "pages/home";
@@ -51,76 +55,21 @@
   box-shadow: inset(2px 1px 5px $color-dark-white);
 }
 
-.menu-icon {
-  font-size: 1.8rem;
-  border: 2px solid $color-orange;
-  border-radius: 8px;
-  z-index: 2;
-  width: 3.8rem;
-  padding: 1rem 0.5rem;
-  color: $color-orange;
-  background-color: rgba(5, 5, 5, 0.473);
-
-  &-box {
-    display: none;
-
-    z-index: 1;
-  }
-}
 //navbar link style
-
-.btn {
-  &-div {
-    text-align: center;
-    z-index: 10;
-    padding-top: 4rem;
-  }
-  &:link,
-  &:visited {
-    @extend %btn;
-    animation: moveInBottom 1s ease-out 0.3s backwards;
-  }
-  &:hover {
-    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.068);
-    transform: translateY(-3px);
-  }
-  &:active {
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.068);
-    transform: translateY(-1px);
-  }
-  &:hover,
-  &:active {
-    background: $color-orange;
-
-    color: $color-dark-white;
-    box-shadow: inset(2px 4px 5px $color-dark-white);
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
-.hire {
-  border: 1px solid $color-orange;
-  background: $color-gray;
-  color: $color-orange;
-}
 
 //about section
 
 %padd-100 {
-  padding: 10rem;
+  padding: 11rem;
   background: $color-dark-gray;
 }
+
 $width-100: 100%;
 .about-container {
-  @extend %padd-100;
+  padding: $padding-11;
+  background: $color-dark-gray;
   .about {
-    display: flex;
-    width: $width-100;
-    align-items: center;
-    justify-content: center;
-    &-image-box {
+    &__image-box {
       position: relative;
       // z-index:1;
 
@@ -159,47 +108,12 @@ $width-100: 100%;
       // }
     }
 
-    &-image {
+    &__image {
       transform: rotateY(220deg);
       margin: auto;
       border-radius: 5px;
       // height:40rem;
       background-color: black;
-    }
-
-    &-paragraph-box {
-      color: $color-dark-white;
-      font-size: 2.4rem;
-      // width: $width-100;
-    }
-    &-heading {
-      font-size: 4.8rem;
-      @extend %text-color-mixed;
-      @extend %background-img-unit;
-      letter-spacing: 1.5px;
-      // padding-bottom: 3rem;
-      position: relative;
-      &::before {
-        content: " ";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 10%;
-        height: 3px;
-        @extend %background-img;
-      }
-      &::after {
-        content: " ";
-        position: absolute;
-        bottom: -1rem;
-        left: 0;
-        width: 7%;
-        height: 3px;
-        @extend %background-img;
-      }
-    }
-    &-paragraph {
-      padding-top: 3rem;
     }
   }
 }

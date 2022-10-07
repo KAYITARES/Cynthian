@@ -3,7 +3,7 @@
     to $direction,
 
     $color-blue,
-    $color-dark-white,
+    $color-gray-light,
     $color-orange
   );
 }
@@ -12,3 +12,7 @@
   color: transparent;
   -webkit-background-clip: text;
 }
+// @mixin auto-margin {
+//   padding: 11rem;
+//   background: $color-dark-gray;
+// }
