@@ -6,6 +6,8 @@
 @import "base/utilities.scss";
 
 @import "components/button";
+@import "components/feature-box";
+@import "components/image-comp";
 
 @import "layout/grid";
 @import "layout/nav";
@@ -26,6 +28,14 @@
     $color-orange,
     $color-blue 50%,
     $color-white 50%
+  );
+}
+%background-img-units {
+  background-image: linear-gradient(
+    to left bottom,
+    $color-blue,
+    $color-orange,
+    $color-gray-light
   );
 }
 %background-img {
@@ -66,7 +76,7 @@
 
 $width-100: 100%;
 .about-container {
-  padding: $padding-11;
+  padding: 13rem 11rem;
   background: $color-dark-gray;
   .about {
     &__image-box {
@@ -87,8 +97,8 @@ $width-100: 100%;
         content: "";
         position: absolute;
         height: 80px;
-        left: -1rem;
-        top: -4rem;
+        left: 1rem;
+        top: -5rem;
         width: 8rem;
 
         border-top: 1rem solid $color-orange;
@@ -116,4 +126,19 @@ $width-100: 100%;
       background-color: black;
     }
   }
+}
+// services-section
+.skills-section,
+.services-section,
+.contact-section {
+  text-align: center;
+}
+.skills-section {
+  padding: 11rem;
+  background: $color-dark-gray;
+}
+.services-section,
+.contact-section {
+  padding: 11rem 0;
+  background-color: $color-black;
 }

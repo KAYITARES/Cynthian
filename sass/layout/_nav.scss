@@ -8,6 +8,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  scroll-behavior: smooth;
   z-index: 999;
   background-color: $color-dark-gray;
   &__logo-box {

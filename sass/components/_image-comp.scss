@@ -1,0 +1,19 @@
+.logo-skills {
+  display: flex;
+  gap: 3rem;
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+}
+
+.skills-img {
+  height: 15rem;
+  -webkit-animation: rotation 10s infinite linear;
+  display: inline-block;
+  filter: brightness(100%);
+  //   box-shadow: 1px 3px 3px $color-gray;
+}
+
+.border-radius {
+  border-radius: 50%;
+}

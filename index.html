@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KAYITARE CYNTHIA</title>
-
+    <link rel="stylesheet" href="css/fonts-icon.css" />
+    <link rel="stylesheet" href="css/icon-font.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -36,7 +37,7 @@
     <link rel="stylesheet" href="./queries.css" />
   </head>
   <body>
-    <div class="home-container">
+    <div class="home-container" id="home">
       <nav class="nav">
         <div class="nav__logo-box">
           <h1 class="nav__logo">
@@ -51,10 +52,11 @@
           <i class="fa-solid fa-bars menu-icon"></i>
         </div>
         <ul class="nav__nav-links">
-          <li><a href="" class="nav__nav-link">Home</a></li>
-          <li><a href="" class="nav__nav-link">About</a></li>
-          <li><a href="" class="nav__nav-link">Services</a></li>
-          <li><a href="" class="nav__nav-link">Contact-me</a></li>
+          <li><a href="#home" class="nav__nav-link">Home</a></li>
+          <li><a href="#about" class="nav__nav-link">About</a></li>
+          <li><a href="#services" class="nav__nav-link">Services</a></li>
+          <li><a href="#skills" class="nav__nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav__nav-link">Contact-me</a></li>
         </ul>
       </nav>
       <div class="header">
@@ -85,7 +87,7 @@
         </div>
       </div>
     </div>
-    <div class="about-container">
+    <div class="about-container" id="about">
       <div class="about">
         <div class="about__image-box">
           <img
@@ -100,10 +102,143 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
             iure modi alias, pariatur praesentium veritatis rerum velit
             accusamus quam nemo cupiditate, numquam minima temporibus
-            necessitatibus consequuntur iusto quo. Aspernatur, cum.
+            necessitatibus consequuntur iusto quo. Aspernatur, cum. lorem
           </p>
         </div>
       </div>
+    </div>
+
+    <div class="services-section" id="services">
+      <h3 class="paragraph__heading">Services</h3>
+      <p class="paragraph__paragraph padd-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo iure
+        modi alias, pariatur praesentium veritatis rerum velit accusamus quam
+        nemo cupiditate, numquam minima temporibus necessitatibus consequuntur
+        iusto quo. Aspernatur, cum. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Explicabo iure modi alias, pariatur praesentium
+        veritatis rerum velit accusamus quam nemo cupiditate, numquam minima
+        temporibus necessitatibus consequuntur iusto quo. Aspernatur, cum.
+      </p>
+      <section class="section-features">
+        <div class="row">
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-world"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">IT Support</h3>
+              <p class="feature-box_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores nulla deserunt voluptatum nam.t.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-compass"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Computer Repair
+              </h3>
+              <p class="feature-box_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores nulla deserunt voluptatum nam.t.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-map"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                UI/UX Design
+              </h3>
+              <p class="feature-box_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores nulla deserunt voluptatum nam.t.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="feature-box">
+              <i class="feature-box__icon icon-basic-cup"></i>
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Software Developer
+              </h3>
+              <p class="feature-box_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores nulla deserunt voluptatum nam.t.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="skills-section" id="skills">
+      <div class="row">
+        <h3 class="paragraph__heading">SKILLS</h3>
+        <div class="logo-skills">
+          <img
+            src="./images/html.png"
+            alt="html and css image"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/css.png"
+            alt=" css image"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/sass.png"
+            alt="sass image"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/js.jpg"
+            alt="js image"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/react.png"
+            alt="react js"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/node-removebg-preview.png"
+            alt="node js"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/angular.png"
+            alt="angular js"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/Python.png"
+            alt="django"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/django.jpg"
+            alt="django"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/flask.png"
+            alt="django"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/mongo.png"
+            alt="mongo"
+            class="skills-img border-radius"
+          />
+          <img
+            src="./images/postgres.png"
+            alt="postgresql"
+            class="skills-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="contact-section" id="contact">
+      <h3 class="paragraph__heading">Contact-me</h3>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
