@@ -1,0 +1,14 @@
+.footer {
+  padding: 2rem;
+  background-color: $color-dark-gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 1.8rem;
+    color: $color-dark-white;
+    letter-spacing: 2px;
+  }
+}

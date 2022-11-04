@@ -138,8 +138,84 @@ h3.professional {
 .btn--animated {
   animation: moveInBottom 1s ease-out 0.3s backwards; }
 
+.m-bottom {
+  margin-bottom: 6rem; }
+
+.btn-left {
+  text-align: left;
+  margin-top: 3rem; }
+
+.message {
+  position: relative;
+  min-height: 60vh;
+  width: 100%; }
+
+.send-message {
+  width: 62%;
+  position: absolute;
+  top: 0;
+  left: 3%;
+  z-index: 5;
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px #54b3d6;
+  padding: 5rem 8rem;
+  background: #2928285b; }
+  .send-message .paragraph__subheading {
+    text-align: left;
+    font-size: 3.2rem;
+    color: #ccc; }
+    .send-message .paragraph__subheading--paragraph {
+      font-size: 1.6rem;
+      text-align: left;
+      margin-bottom: 2rem; }
+  .send-message .names {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    justify-content: center; }
+  .send-message label {
+    display: none; }
+  .send-message input,
+  .send-message textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    font-size: 1.8rem;
+    padding: 1.5rem 0rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #f1662c; }
+    .send-message input:focus,
+    .send-message textarea:focus {
+      box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-bottom: 3px solid #54b3d6;
+      outline: none; }
+      .send-message input:focus:invalid,
+      .send-message textarea:focus:invalid {
+        color: #f1662c; }
+
+.send-contact {
+  background-image: linear-gradient(to right top, #f1662c 70%, #fff 15%, #54b3d6 15%);
+  display: block;
+  padding: 3rem;
+  width: 38%;
+  text-align: left;
+  position: absolute;
+  right: 1%;
+  z-index: 10;
+  box-shadow: 0px 2px 10px #f1662c;
+  border-radius: 3px;
+  top: 12%; }
+  .send-contact .contact__headings {
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left bottom, #fff, #54b3d6);
+    color: transparent;
+    -webkit-background-clip: text; }
+
 .feature-box {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   background-color: #2928285b;
   padding: 2.5rem;
   text-align: center;
@@ -161,19 +237,24 @@ h3.professional {
         margin-bottom: 0rem; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
+  .feature-box__text {
+    font-size: 1.6rem; }
 
 .logo-skills {
   display: flex;
   gap: 3rem;
   row-gap: 3rem;
   flex-wrap: wrap;
-  margin-top: 6rem; }
+  margin-top: 6rem;
+  align-items: center;
+  text-align: center; }
 
 .skills-img {
   height: 15rem;
   -webkit-animation: rotation 10s infinite linear;
   display: inline-block;
-  filter: brightness(100%); }
+  filter: brightness(100%);
+  display: inline-block; }
 
 .border-radius {
   border-radius: 50%; }
@@ -222,6 +303,17 @@ h3.professional {
     width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.footer {
+  padding: 2rem;
+  background-color: #000000e4;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .footer p {
+    font-size: 1.8rem;
+    color: #ccc;
+    letter-spacing: 2px; }
 
 .nav {
   padding: 2.5rem 10rem;
@@ -383,7 +475,10 @@ h3.professional {
   padding: 11rem;
   background: #000000e4; }
 
-.services-section,
-.contact-section {
+.services-section {
   padding: 11rem 0;
+  background-color: #000; }
+
+.contact-section {
+  padding: 11rem;
   background-color: #000; }
