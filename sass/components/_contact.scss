@@ -1,6 +1,9 @@
 .m-bottom {
   margin-bottom: 6rem;
 }
+.sm-bottom {
+  margin-bottom: 2rem;
+}
 .btn-left {
   text-align: left;
   margin-top: 3rem;
@@ -23,6 +26,7 @@
   top: 0;
   left: 3%;
   z-index: 5;
+
   border-radius: 8px;
   box-shadow: 0px 1px 2px $color-blue;
   padding: 5rem 8rem;
@@ -56,6 +60,7 @@
     font-size: 1.8rem;
     padding: 1.5rem 0rem;
     margin-bottom: 2rem;
+    transition: all 0.3s;
     border-bottom: 3px solid $color-orange;
 
     &:focus {
@@ -63,7 +68,10 @@
       border-bottom: 3px solid $color-blue;
       outline: none;
 
-      &:invalid {
+      &:focus:invalid {
+        border-bottom: 3px solid red;
+      }
+      &::-webkit-input-placeholder {
         color: $color-orange;
       }
     }
@@ -72,9 +80,8 @@
 .send-contact {
   background-image: linear-gradient(
     to right top,
-    $color-orange 70%,
+    $color-orange 85%,
 
-    $color-white 15%,
     $color-blue 15%
   );
   display: block;
@@ -86,9 +93,40 @@
   position: absolute;
   right: 1%;
   z-index: 10;
-  box-shadow: 0px 2px 10px $color-orange;
+  box-shadow: 1px 1px 5px $color-orange;
+  // border: 1px solid $color-white;
   border-radius: 3px;
   top: 12%;
+  .social-icon {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    gap: 1rem;
+    // margin: 0 auto;
+    // justify-content:;
+    padding: 0.2rem;
+    // text-align: center;
+    text-decoration: none;
+    background-image: linear-gradient(to right, $color-white, $color-blue);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 500;
+    &:hover {
+      color: $color-blue;
+    }
+    .icon {
+      font-size: 2rem;
+      // margin-bottom: 0.5rem;
+      // background-image: linear-gradient(to right, black, $color-blue);
+      // color: transparent;
+      display: inline-block;
+      color: $color-blue;
+      // background-color: $color-blue;
+      border-radius: 50%;
+      // -webkit-background-clip: text;
+    }
+  }
+
   .contact__headings {
     font-size: 3.8rem;
     text-transform: uppercase;
@@ -100,5 +138,23 @@
     );
     color: transparent;
     -webkit-background-clip: text;
+    position: relative;
+    &::before,
+    &::after {
+      content: " ";
+      position: absolute;
+      height: 3px;
+      left: 0;
+      // background-color: azure;
+      @include backgroundColorz(right bottom);
+    }
+    &::before {
+      bottom: 0;
+      width: 20%;
+    }
+    &::after {
+      bottom: -0.8rem;
+      width: 12%;
+    }
   }
 }

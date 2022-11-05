@@ -7,6 +7,15 @@
     $color-orange
   );
 }
+@mixin backgroundColorz($direction) {
+  background-image: linear-gradient(
+    to $direction,
+
+    $color-white,
+    $color-blue
+  );
+}
+
 @mixin text-background-color($direction) {
   background-image: linear-gradient(to $direction, $color-blue, $color-orange);
   color: transparent;
